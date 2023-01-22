@@ -1,0 +1,27 @@
+@import '../../App.scss';
+
+.form {
+    border-radius: 1rem;
+    width: 100%;
+    background-color: $color-primary-dark;
+    
+    &__container {
+      padding: 1rem;
+      width: 100%;
+      display: flex;
+    }
+  
+    &__left {
+      width: 60%;
+      padding: 0rem 3rem;
+    }
+  
+    & .logo__container {
+      display: flex;
+      justify-content: center;
+  
+      & img {
+        width: 40%;
+      }
+    }
+}

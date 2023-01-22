@@ -1,0 +1,30 @@
+// COLOR VARIABLES
+$color-primary: #01c8ff;
+$color-primary-dark: #e3ecff;
+
+$color-text-light: #4b4a4a;
+$color-text-dark: #000000;
+
+$color-white: #ffffff;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; 
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: $color-white;
+  color: $color-text-light;
+  font-weight: 400;
+  line-height: 1.5;
+}
