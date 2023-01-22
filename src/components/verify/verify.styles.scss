@@ -3,4 +3,21 @@
 .verify {
     padding: 3rem;
     height: 100vh;
+
+    &__content {
+        display: flex;
+        gap: 1.5rem;
+        padding: 5rem;
+        width: 80%;
+        justify-content: center;
+    }
+
+    &__block {
+        display: block;
+        width: 5rem;
+        height: 7rem;
+        border: 1.5px solid $color-primary;
+        border-radius: 5px;
+        cursor: pointer;
+    }
 }

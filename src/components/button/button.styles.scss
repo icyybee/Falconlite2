@@ -1,0 +1,20 @@
+@import '../../App.scss';
+
+.button {
+    margin: 5rem;
+    display: flex;
+
+    & button {
+        width: 80%;
+        background-color: $color-primary;
+        text-transform: initial;
+        color: $color-text-light;
+        font-size: 1.5rem;
+        font-family: inherit;
+        border-radius: 7px;
+
+        &:hover {
+            background-color: $color-primary;
+        }
+    }
+}

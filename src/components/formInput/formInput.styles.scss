@@ -1,0 +1,42 @@
+@import '../../App.scss';
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+
+    & input {
+        width: 85%;
+        border: 1.9px solid $color-primary;
+        background-color: $color-primary-dark;
+        border-radius: 5px;
+        padding: 1.5rem 3rem;
+        display: block;
+
+        &:focus {
+            outline: none;
+        }
+
+        &::-webkit-input-placeholder {
+            font-weight: 500;
+            font-size: 1.3rem;
+        }
+    }
+
+    & label {
+        font-family: sans-serif;
+        font-weight: 600;
+        font-size: 1.2rem;
+        color: $color-text-medium;
+    }
+
+    &__input {
+        display: flex;
+
+        & .password {
+            margin-left: -5rem;
+            padding: 1.5rem 0rem;
+            cursor: pointer;
+        }
+    }
+}

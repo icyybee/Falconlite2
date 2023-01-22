@@ -3,7 +3,11 @@ $color-primary: #01c8ff;
 $color-primary-dark: #e3ecff;
 
 $color-text-light: #4b4a4a;
+$color-text-medium: #6c757d;
 $color-text-dark: #000000;
+
+$color-check: #6f42c1;
+$color-check-green:#19875494;
 
 $color-white: #ffffff;
 
@@ -27,4 +31,5 @@ body {
   color: $color-text-light;
   font-weight: 400;
   line-height: 1.5;
+  letter-spacing: .2px;
 }

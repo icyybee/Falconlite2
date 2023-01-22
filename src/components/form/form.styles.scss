@@ -1,27 +1,42 @@
 @import '../../App.scss';
 
 .form {
-    border-radius: 1rem;
+  border-radius: 1rem;
+  width: 100%;
+  background-color: $color-primary-dark;
+  
+  &__container {
+    padding: 1rem;
     width: 100%;
-    background-color: $color-primary-dark;
-    
-    &__container {
-      padding: 1rem;
-      width: 100%;
-      display: flex;
+    display: flex;
+  }
+
+  &__left {
+    width: 60%;
+    padding: 0rem 3rem 6rem 3rem ;
+  }
+
+  & .logo__container {
+    display: flex;
+    justify-content: center;
+
+    & img {
+      width: 40%;
     }
-  
-    &__left {
-      width: 60%;
-      padding: 0rem 3rem;
+  }
+
+  &__head {
+    margin-bottom: 3rem;
+
+    & h1 {
+      font-size: 2rem;
+      font-weight: 500;
+      color: $color-text-dark;
     }
-  
-    & .logo__container {
-      display: flex;
-      justify-content: center;
-  
-      & img {
-        width: 40%;
-      }
+
+    & h2 {
+      font-weight: 500;
+      font-size: 1.5rem;
     }
+  }
 }

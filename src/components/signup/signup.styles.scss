@@ -2,19 +2,42 @@
 
 .signup {
     padding: 3rem;
-    height: 100vh;
+    min-height: 100vh;
 
-    &__head {
+    &__content {
+        display: flex;
+        flex-direction: column;
 
-        & h1 {
-            font-size: 2rem;
-            font-weight: 500;
-            color: $color-text-dark;
+        & .remember {
+            display: flex;
+
+            & input[type=checkbox]:checked {
+                accent-color: $color-check;
+                color: $color-white;
+            }
+
+            & label {
+                margin-left: 1rem;
+                font-size: 1.2rem;
+                color: $color-check-green;
+            }
         }
 
-        & h2 {
-            font-weight: 500;
-            font-size: 1.5rem;
+    }
+    
+    & .signin {
+        margin-top: -3rem;
+        text-align: center;
+        width: 80%;
+        
+        & p {
+            font-size: 1.2rem;
+        }
+        
+        & span {
+            color: $color-primary;
+            text-decoration: underline;
+            cursor: pointer;
         }
     }
 }
