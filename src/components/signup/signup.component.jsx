@@ -22,6 +22,7 @@ const SignUp = () => {
             return alert ('Please fill out all fields!');
         }
 
+        //Email verification
         const response = await fetch('https://falconlite.com/v1/api/send-email', {
             method: 'POST',
             body: JSON.stringify({
