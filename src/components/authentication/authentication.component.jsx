@@ -22,17 +22,17 @@ const Authentication = () => {
                                 </div>
                                 <div className='auth__body'>
                                     <div className='auth__body--group'>
-                                        <img src={Flag1} className='auth__flag'/>
+                                        <img src={Flag1} className='auth__flag' alt='US flag'/>
                                         <p className='currency'>United States Dollars</p>
                                         <p className='amount'>$103,748.30</p>
                                     </div>
                                     <div className='auth__body--group'>
-                                        <img src={Flag2} className='auth__flag' />
+                                        <img src={Flag2} className='auth__flag' alt='flag 2'/>
                                         <p className='currency'>Great British Pound</p>
                                         <p className='amount'>&#163;84,000.28</p>
                                     </div>
                                     <div className='auth__body--group'>
-                                        <img src={Flag3} className='auth__flag' />
+                                        <img src={Flag3} className='auth__flag' alt='flag 3'/>
                                         <p className='currency'>European Euro</p>
                                         <p className='amount'>&#163;50,000.00</p>
                                     </div>
@@ -42,7 +42,7 @@ const Authentication = () => {
                             <div className='auth__box--sub'>
                                 <div className='auth__box box--2'>
                                     <div className='auth__top'>
-                                        <img src={Flag1} className='auth__flag'/>
+                                        <img src={Flag1} className='auth__flag' alt='US flag'/>
                                         <p>United States Dollars</p>
                                         <p>USD</p>
                                     </div>
