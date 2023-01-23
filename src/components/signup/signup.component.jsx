@@ -34,7 +34,7 @@ const SignUp = () => {
             headers: { 'Content-Type' : 'application/json'}
         });
         const json = await response.json();
-        
+        console.log(json.data.message);
         if (json.success === true && json.code === 200) {
             alert(json.data.message);
 
