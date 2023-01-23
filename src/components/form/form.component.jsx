@@ -4,9 +4,9 @@ import Logo from '../../assets/logo.png';
 
 import './form.styles.scss';
 
-const Form = ({children, headTop, headBottom}) => {
+const Form = ({handleSubmit, children, headTop, headBottom}) => {
     return (
-        <div className='form'>
+        <form className='form' onSubmit={handleSubmit}>
             <div className='form__container'>
                 <div className='form__left'>
                     <div className='logo__container'>
@@ -20,7 +20,7 @@ const Form = ({children, headTop, headBottom}) => {
                 </div>
                 <Authentication />
             </div>
-        </div>
+        </form>
     )
 }
 

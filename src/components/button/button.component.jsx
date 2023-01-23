@@ -5,7 +5,7 @@ import './button.styles.scss';
 const FormButton = ({text}) => {
     return (
         <div className='button'>
-            <Button variant="contained">{text}</Button>
+            <Button type='submit' variant="contained">{text}</Button>
         </div>
     )
 }
