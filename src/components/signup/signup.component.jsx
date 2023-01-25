@@ -7,12 +7,14 @@ import './signup.styles.scss';
 import Form from '../form/form.component';
 import FormInput from '../formInput/formInput.component';
 import FormButton from '../button/button.component';
+import Verify from '../verify/verify.component';
 
 const SignUp = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [phone, setPhone] = useState('');
     const [password, setPassword] = useState('');
+    const [code, setCode] = useState('');
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -23,30 +25,33 @@ const SignUp = () => {
         }
 
         //Email verification
-        const response = await fetch('https://falconlite.com/v1/api/send-email', {
-            method: 'POST',
-            body: JSON.stringify({
-                name,
-                email,
-                phone,
-                password
-            }),
-            headers: { 'Content-Type' : 'application/json'}
-        });
-        const json = await response.json();
-        console.log(json.data.message);
-        if (json.success === true && json.code === 200) {
-            alert(json.data.message);
+        const urlencoded = new URLSearchParams();
+        urlencoded.append("name", name);
+        urlencoded.append("email", email);
+        urlencoded.append("phone", phone);
+        urlencoded.append("password", password);
 
+        const requestOptions = {
+        method: 'POST',
+        body: urlencoded,
+        headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+        redirect: 'follow'
+        };
+
+        const response = await fetch('https://falconlite.com/v1/api/send-email', requestOptions);
+        const result = await response.json();
+        console.log(result);
+
+        if (result.success === true && result.code === 200) {
+            alert(result.data.message);
+            setCode(result.data.verification_code);
+            
             //Sending verification code
-            const verificationResponse = await fetch ('https://falconlite.com/v1/api/verify-email', {
-                method: 'POST',
-                body: JSON.stringify({
-                    email : json.data.email
-                }),
-                headers: { 'Content-Type' : 'application/json'}
-            });
-    
+            const urlencoded = new URLSearchParams();
+            urlencoded.append("code", result.data.verification_code);
+
+            const verificationResponse = await fetch ('https://falconlite.com/v1/api/verify-email', requestOptions);
+  
             if (verificationResponse.ok) {
                 alert("A Verification code has been sent to your email!");
             } else {
@@ -108,6 +113,7 @@ const SignUp = () => {
                     <p>Already have an account? <span>Sign in</span></p>
                 </div>
             </Form>
+            {code && <Verify code={code} />}
         </div>
     )
 }

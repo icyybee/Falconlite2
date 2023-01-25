@@ -19,5 +19,19 @@
         border: 1.7px solid $color-primary;
         border-radius: 5px;
         cursor: pointer;
+
+        & input {
+            width: 100%;
+            padding: 1rem;
+            height: 100%;
+            background-color: inherit;
+            border: none;
+            font-size: 3rem;
+            text-align: center;
+
+            &:focus {
+                outline: none;
+            }
+        }
     }
 }

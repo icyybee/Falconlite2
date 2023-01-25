@@ -6,7 +6,7 @@ const App = () => {
   return (
     <div className='app'>
       <SignUp />
-      <Verify />
+      {/* <Verify /> */}
     </div>
   );
 }
