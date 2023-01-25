@@ -13,6 +13,10 @@
         padding: 1.5rem 3rem;
         display: block;
 
+        @media (max-width: $bp-smallest) {
+            width: 100%;
+        }
+
         &:focus {
             outline: none;
         }

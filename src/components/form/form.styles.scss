@@ -9,11 +9,19 @@
     padding: 1rem;
     width: 100%;
     display: flex;
+
+    @media (max-width: $bp-largest) {
+      flex-direction: column;
+    }
   }
 
   &__left {
     width: 60%;
     padding: 0rem 3rem 6rem 3rem ;
+
+    @media (max-width: $bp-largest) {
+      width: 100%;
+    }
   }
 
   & .logo__container {

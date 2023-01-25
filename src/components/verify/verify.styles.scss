@@ -1,7 +1,7 @@
 @import '../../App.scss';
 
 .verify {
-    padding: 3rem;
+    padding-top: 3rem;
 
     &__content {
         display: flex;
@@ -10,6 +10,13 @@
         width: 80%;
         justify-content: center;
         margin: 7rem 0rem;
+
+        @media (max-width: $bp-small) {
+            gap: 1rem;
+            margin: 5rem 0rem;
+            width: 100%;
+            padding: 0rem;
+        }
     }
 
     &__block {
@@ -20,6 +27,11 @@
         border-radius: 5px;
         cursor: pointer;
 
+        @media (max-width: $bp-small) {
+            width: 7rem;
+            height: 8rem;
+        }
+
         & input {
             width: 100%;
             padding: 1rem;
@@ -28,6 +40,10 @@
             border: none;
             font-size: 3rem;
             text-align: center;
+
+            @media (max-width: $bp-small) {
+                padding: 0rem;
+            }
 
             &:focus {
                 outline: none;

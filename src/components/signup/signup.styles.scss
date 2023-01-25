@@ -4,6 +4,10 @@
     padding: 3rem;
     min-height: 100vh;
 
+    @media (max-width: $bp-small) {
+        padding: 1rem;
+    }
+
     &__content {
         display: flex;
         flex-direction: column;

@@ -13,6 +13,13 @@ $color-check-green:#19875494;
 $color-white: #ffffff;
 $color-grey: #adb5bd;
 
+// RESPONSIVE BREAKPOINTS
+$bp-largest: 75em;   // 1200px
+$bp-large: 62.5em;   // 1000px
+$bp-medium: 56.25em;    // 900px;
+$bp-small: 37.5em;    // 600px;
+$bp-smallest: 25em;   //400px
+
 *,
 *::before,
 *::after {
@@ -25,6 +32,10 @@ $color-grey: #adb5bd;
 html {
   font-size: 62.5%; 
   scroll-behavior: smooth;
+
+  @media only screen and (max-width: $bp-small) {
+    font-size: 50%;
+  }
 }
 
 body {
